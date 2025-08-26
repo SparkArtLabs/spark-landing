@@ -216,50 +216,25 @@
     <p>Tell us about your campus, dates, and goals. We reply within one business day.</p>
 
     <div class="contact-wrap">
+      <!-- Contact info card -->
       <div class="card">
         <p class="small"><strong>Email:</strong> hello@sparkartlabs.com</p>
         <p class="small"><strong>Service area:</strong> Greater Austin + Central TX</p>
-
-        <!-- Google Calendar popup button -->
-        <div id="spark-book-btn" style="margin-top:10px">
-          <a href="#" class="btn btn-primary" id="gc-booking-button" role="button">
-            Book a 20-min intro call
-          </a>
-          <script>
-            window.addEventListener('load', function () {
-              if (window.calendar && calendar.schedulingButton) {
-                calendar.schedulingButton.load({
-                  url: 'YOUR_APPOINTMENT_SCHEDULE_LINK_HERE',
-                  color: '#000000',
-                  label: 'Book a 20-min intro call',
-                  target: document.getElementById('gc-booking-button')
-                });
-              }
-            });
-          </script>
-          <noscript>
-            <a class="btn btn-primary" href="YOUR_APPOINTMENT_SCHEDULE_LINK_HERE" target="_blank" rel="noopener">
-              Book a 20-min intro call
-            </a>
-          </noscript>
-        </div>
       </div>
 
-      <!-- Keep your existing inquiry form if you want both options -->
-      <form class="card form">
-        <input class="input" placeholder="Name" />
-        <input class="input" placeholder="Email" />
-        <input class="input" placeholder="Organization / Campus" />
-        <textarea rows="4" class="input" placeholder="What are you hoping to set up? (dates, audience, goals)"></textarea>
-        <button class="submit" type="submit">Submit</button>
-      </form>
+      <!-- Calendly inline embed -->
+      <div class="card" style="width:100%;padding:0;">
+        <div class="calendly-inline-widget"
+             data-url="https://calendly.com/heather-sparkartlabs/30min"
+             style="min-width:320px;height:700px;">
+        </div>
+        <script type="text/javascript"
+                src="https://assets.calendly.com/assets/external/widget.js"
+                async></script>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- Include the script once per page (ideally before </body>) -->
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-
 
   <!-- Footer -->
   <footer>
